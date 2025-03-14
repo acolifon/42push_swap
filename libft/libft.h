@@ -6,7 +6,7 @@
 /*   By: ancarol9 <ancarol9@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/15 16:36:26 by ancarol9          #+#    #+#             */
-/*   Updated: 2025/02/20 18:48:26 by ancarol9         ###   ########.fr       */
+/*   Updated: 2025/03/10 18:06:52 by ancarol9         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,8 +50,9 @@ int		pf_putptr_fd(void *arg, int fd);
 int		pf_putnbr_fd(int n, int fd);
 int		pf_putstr_fd(char *str, int fd);
 int		pf_putunnbr_fd(unsigned int n, int fd);
-
 int		gnl_strchr(const char *str, int c);
+
+long	ft_atol(const char *nptr);
 
 void	*ft_memset(void *s, int c, size_t n);
 void	*ft_memmove(void *dest, const void *src, size_t n);

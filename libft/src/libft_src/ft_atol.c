@@ -1,21 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_atol.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ancarol9 <ancarol9@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/15 19:51:45 by ancarol9          #+#    #+#             */
-/*   Updated: 2025/03/10 18:14:11 by ancarol9         ###   ########.fr       */
+/*   Created: 2025/03/10 18:02:21 by ancarol9          #+#    #+#             */
+/*   Updated: 2025/03/10 18:14:01 by ancarol9         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../libft.h"
 
-int	ft_atoi(const char *nptr)
+long	ft_atol(const char *nptr)
 {
-	int	nb;
-	int	isneg;
+	long	nb;
+	long	isneg;
 
 	nb = 0;
 	isneg = 1;

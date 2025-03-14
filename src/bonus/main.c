@@ -1,18 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isascii.c                                       :+:      :+:    :+:   */
+/*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ancarol9 <ancarol9@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/15 18:21:56 by ancarol9          #+#    #+#             */
-/*   Updated: 2025/03/10 18:14:48 by ancarol9         ###   ########.fr       */
+/*   Created: 2025/03/06 18:24:48 by ancarol9          #+#    #+#             */
+/*   Updated: 2025/03/06 18:27:49 by ancarol9         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "../../includes/bonus/push_swap_bonus.h"
 
-
-int	ft_isascii(int c)
+int	main(int argc, char *argv)
 {
-	return (c >= 0 && c <= 127);
+	if (argc > 2)
+	{
+		
+	}
+
+	return (0);
 }

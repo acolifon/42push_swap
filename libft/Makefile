@@ -6,7 +6,7 @@
 #    By: ancarol9 <ancarol9@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/10/15 16:35:56 by ancarol9          #+#    #+#              #
-#    Updated: 2025/02/09 21:44:56 by ancarol9         ###   ########.fr        #
+#    Updated: 2025/03/10 18:07:18 by ancarol9         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -34,6 +34,7 @@ FILE = src/libft_src/ft_isalpha.c \
 	src/libft_src/ft_memcmp.c \
 	src/libft_src/ft_strnstr.c \
 	src/libft_src/ft_atoi.c \
+	src/libft_src/ft_atol.c \
 	src/libft_src/ft_calloc.c \
 	src/libft_src/ft_strdup.c \
 	src/libft_src/ft_substr.c \
