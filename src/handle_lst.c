@@ -6,7 +6,7 @@
 /*   By: ancarol9 <ancarol9@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/11 15:49:33 by ancarol9          #+#    #+#             */
-/*   Updated: 2025/03/13 16:34:58 by ancarol9         ###   ########.fr       */
+/*   Updated: 2025/03/19 18:28:10 by ancarol9         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,13 +70,13 @@ void    create_lst_split(t_stack_node **lst_node, char *nbrs)
 	{
 		if (!is_digit(nbr_arr[i]))
 		{
-			ft_printf("ERROR: Not only numbers.\n");
+			ft_printf("Error\n");
 			exit_program_failure(lst_node, nbr_arr);
 		}
 		nb = ft_atol(nbr_arr[i]);
 		if (nb > INT_MAX || nb < INT_MIN)
 		{
-			ft_printf("ERROR: number out of range.\n");
+			ft_printf("Error\n");
 			exit_program_failure(lst_node, nbr_arr);
 		}
 		node = create_node(nb, i); 
@@ -99,13 +99,13 @@ void	create_lst(t_stack_node **lst, char **nbr)
 	{
 		if (!is_digit(nbr[i]))
 		{
-			ft_printf("ERROR: Not only numbers.\n");
+			ft_printf("Error\n");
 			exit_program_failure(lst, NULL);
 		}
 		nb = ft_atol(nbr[i]);
 		if (nb > INT_MAX || nb < INT_MIN)
 		{
-			ft_printf("ERROR: number out of range.\n");
+			ft_printf("Error\n");
 			exit_program_failure(lst, NULL);
 		}
 		node = create_node(nb, i);

@@ -16,12 +16,13 @@ SRC = src/main.c \
 		src/handle_errors.c \
 		src/handle_lst.c \
 		src/validate_nbrs.c \
-		src/push.c \
-		src/rotate.c \
-		src/rotate_rev.c \
-		src/swap.c \
-		
-		
+		src/op_push.c \
+		src/op_rotate.c \
+		src/op_rotate_rev.c \
+		src/op_swap.c \
+		src/sort_stack.c \
+		src/update_node.c \
+
 SRC_BONUS = src/bonus/main.c
 
 OBJ_DIR = obj

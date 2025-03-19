@@ -6,7 +6,7 @@
 /*   By: ancarol9 <ancarol9@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/11 15:46:54 by ancarol9          #+#    #+#             */
-/*   Updated: 2025/03/11 17:34:47 by ancarol9         ###   ########.fr       */
+/*   Updated: 2025/03/19 16:27:09 by ancarol9         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,6 +49,7 @@ bool	is_inorder(t_stack_node **lst)
 	}
 	return (true);
 }
+
 bool	is_digit(char *nbr)
 {
 	if (!nbr)

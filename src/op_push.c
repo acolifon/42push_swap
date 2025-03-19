@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push.c                                             :+:      :+:    :+:   */
+/*   op_push.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ancarol9 <ancarol9@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/11 17:58:07 by ancarol9          #+#    #+#             */
-/*   Updated: 2025/03/13 18:18:08 by ancarol9         ###   ########.fr       */
+/*   Updated: 2025/03/19 16:16:15 by ancarol9         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,8 +25,8 @@ void    push(t_stack_node **dest, t_stack_node **src, char letter)
     tmp->next = *dest;              //adiciona como next a lista destino
     if(*dest)                       //se ela existir...
         (*dest)->prev = tmp;        //adiciona como no anterior o novo no
-    *dest = tmp;
     tmp->prev = NULL;
+    *dest = tmp;
     if (letter == 'a')
         write(1, "pa\n", 3);
     else    
