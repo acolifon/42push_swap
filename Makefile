@@ -22,6 +22,8 @@ SRC = src/main.c \
 		src/op_swap.c \
 		src/sort_stack.c \
 		src/update_node.c \
+		src/update_utils.c \
+		src/find.c
 
 SRC_BONUS = src/bonus/main.c
 
