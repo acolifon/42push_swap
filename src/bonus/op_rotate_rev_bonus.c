@@ -1,43 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   op_rotate.c                                        :+:      :+:    :+:   */
+/*   op_rotate_rev_bonus.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ancarol9 <ancarol9@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/03/13 17:39:11 by ancarol9          #+#    #+#             */
-/*   Updated: 2025/03/21 14:52:48 by ancarol9         ###   ########.fr       */
+/*   Created: 2025/03/13 17:48:15 by ancarol9          #+#    #+#             */
+/*   Updated: 2025/03/21 18:54:41 by ancarol9         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/push_swap.h"
+#include "../../includes/bonus/push_swap_bonus.h"
 
-void	rotate(t_stack_node **stack, char letter)
+void	rotate_rev(t_stack_node **stack, char letter)
 {
 	t_stack_node	*tmp;
 
 	if (!stack || !*stack || !(*stack)->next)
 		return ;
-	tmp = *stack;
-	*stack = (*stack)->next;
-	(*stack)->prev = NULL;
-	tmp->next = NULL;
-	stackadd_back(stack, tmp);
+	tmp = stack_last_node(*stack);
+	tmp->prev->next = NULL;
+	tmp->prev = NULL;
+	tmp->next = *stack;
+	(*stack)->prev = tmp;
+	*stack = tmp;
 	if (letter == 'a')
-		write(1, "ra\n", 3);
+		write(1, "rra\n", 4);
 	if (letter == 'b')
-		write(1, "rb\n", 3);
+		write(1, "rrb\n", 4);
 }
 
-void	rotate_both(t_stack_node **stack_a, t_stack_node **stack_b, \
-					t_stack_node *cheapest)
+void	rotate_rev_both(t_stack_node **stack_a, t_stack_node **stack_b)
 {
-	while (*stack_a != cheapest->target_node && *stack_b != cheapest)
-	{
-		rotate(stack_a, 'r');
-		rotate(stack_b, 'r');
-		write(1, "rr\n", 3);
-	}
+
+	rotate_rev(stack_a, 'r');
+	rotate_rev(stack_b, 'r');
+	write(1, "rrr\n", 4);
 	update_index_median(*stack_a);
 	update_index_median(*stack_b);
 }

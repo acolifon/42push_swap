@@ -1,6 +1,6 @@
 NAME = push_swap
 
-NAME_BONUS = push_swap_bonus
+NAME_BONUS = checker
 
 CC = cc
 C_FLAGS = -Wall -Wextra -Werror
@@ -21,11 +21,22 @@ SRC = src/main.c \
 		src/op_rotate_rev.c \
 		src/op_swap.c \
 		src/sort_stack.c \
+		src/sort_utils.c \
 		src/update_node.c \
 		src/update_utils.c \
 		src/find.c
 
-SRC_BONUS = src/bonus/main.c
+SRC_BONUS = src/bonus/main_bonus.c \
+			src/bonus/op_push_bonus.c \
+			src/bonus/op_swap_bonus.c \
+			src/bonus/op_rotate_bonus.c \
+			src/bonus/op_rotate_rev_bonus.c \
+			src/bonus/errors_free_bonus.c \
+			src/bonus/init_bonus.c \
+			src/bonus/node_utils_bonus.c \
+			src/bonus/read_bonus.c \
+			src/bonus/validate_bonus.c
+
 
 OBJ_DIR = obj
 OBJ_DIR_BONUS = obj_bonus
@@ -50,7 +61,7 @@ bonus : $(NAME_BONUS) $(LIBFT)
 $(NAME_BONUS): $(OBJ_BONUS) $(LIBFT)
 	$(CC) $(C_FLAGS) $(OBJ_BONUS) $(LIBFT) -o $(NAME_BONUS)
 
-$(OBJ_DIR_BONUS)/%.o: src/bonus/%.C
+$(OBJ_DIR_BONUS)/%.o: src/bonus/%.c
 	@mkdir -p $(OBJ_DIR_BONUS)
 	$(CC) $(C_FLAGS) -c $< -o $@ $(HEADER_BONUS)
 

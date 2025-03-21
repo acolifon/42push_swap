@@ -1,39 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   op_swap.c                                          :+:      :+:    :+:   */
+/*   op_rotate_bonus.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ancarol9 <ancarol9@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/03/11 18:05:09 by ancarol9          #+#    #+#             */
-/*   Updated: 2025/03/21 14:54:46 by ancarol9         ###   ########.fr       */
+/*   Created: 2025/03/13 17:39:11 by ancarol9          #+#    #+#             */
+/*   Updated: 2025/03/21 18:52:25 by ancarol9         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/push_swap.h"
+#include "../../includes/bonus/push_swap_bonus.h"
 
-void	swap(t_stack_node **stack, char letter)
+void	rotate(t_stack_node **stack, char letter)
 {
 	t_stack_node	*tmp;
 
-	if (!*stack || !(*stack)->next)
+	if (!stack || !*stack || !(*stack)->next)
 		return ;
 	tmp = *stack;
 	*stack = (*stack)->next;
 	(*stack)->prev = NULL;
-	tmp->prev = *stack;
-	tmp->next = (*stack)->next;
-	(*stack)->next = tmp;
-	tmp->next->prev = tmp;
+	tmp->next = NULL;
+	stackadd_back(stack, tmp);
 	if (letter == 'a')
-		write(1, "sa\n", 3);
-	else if (letter == 'b')
-		write(1, "sb\n", 3);
+		write(1, "ra\n", 3);
+	if (letter == 'b')
+		write(1, "rb\n", 3);
 }
 
-void	swap_a_b(t_stack_node **stack_a, t_stack_node **stack_b)
+void	rotate_both(t_stack_node **stack_a, t_stack_node **stack_b)
 {
-	swap(stack_a, 's');
-	swap(stack_b, 's');
-	write(1, "ss\n", 3);
+	rotate(stack_a, 'r');
+	rotate(stack_b, 'r');
+	write(1, "rr\n", 3);
+	update_index_median(*stack_a);
+	update_index_median(*stack_b);
 }
