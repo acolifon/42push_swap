@@ -6,11 +6,11 @@
 /*   By: ancarol9 <ancarol9@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/21 16:30:48 by ancarol9          #+#    #+#             */
-/*   Updated: 2025/03/21 19:05:14 by ancarol9         ###   ########.fr       */
+/*   Updated: 2025/03/24 15:25:17 by ancarol9         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../includes/bonus/push_swap_bonus.h"
+#include "../../includes/bonus/checker_bonus.h"
 
 void	read_commands(t_push *push_swap)
 {
@@ -29,25 +29,25 @@ void	read_commands(t_push *push_swap)
 void	execute_commands(t_push *push_s, char *command)
 {
 	if (!ft_strncmp(command, "sa\n", 3))
-		swap(&push_s->stack_a, 'a');
+		swap(&push_s->stack_a);
 	else if (!ft_strncmp(command, "sb\n", 3))
-		swap(&push_s->stack_a, 'b');
+		swap(&push_s->stack_a);
 	else if (!ft_strncmp(command, "ss\n", 3))
 		swap_a_b(&push_s->stack_a, &push_s->stack_b);
 	else if (!ft_strncmp(command, "pa\n", 3))
-		push(&push_s->stack_a, &push_s->stack_b, 'a');
+		push(&push_s->stack_a, &push_s->stack_b);
 	else if (!ft_strncmp(command, "pb\n", 3))
-		push(&push_s->stack_b, &push_s->stack_a, 'b');
+		push(&push_s->stack_b, &push_s->stack_a);
 	else if (!ft_strncmp(command, "ra\n", 3))
-		rotate(&push_s->stack_a, 'a');
+		rotate(&push_s->stack_a);
 	else if (!ft_strncmp(command, "rb\n", 3))
-		rotate(&push_s->stack_a, 'b');
+		rotate(&push_s->stack_a);
 	else if (!ft_strncmp(command, "rr\n", 3))
 		rotate_both(&push_s->stack_a, &push_s->stack_b);
 	else if (!ft_strncmp(command, "rra\n", 4))
-		rotate_rev(&push_s->stack_a, 'a');
+		rotate_rev(&push_s->stack_a);
 	else if (!ft_strncmp(command, "rrb\n", 4))
-        rotate_rev(&push_s->stack_b, 'b');
+		rotate_rev(&push_s->stack_b);
 	else if (!ft_strncmp(command, "rrr\n", 4))
 		rotate_rev_both(&push_s->stack_a, &push_s->stack_a);
 	else
@@ -60,7 +60,7 @@ void	verify_stack(t_push *push_swap)
 
 	length = stack_size(push_swap->stack_a);
 	if ((is_inorder(push_swap->stack_a)) && \
-		    (length == push_swap->len_a) && \
+		(length == push_swap->len_a) && \
 		(push_swap->stack_b == NULL))
 		ft_printf("OK\n");
 	else

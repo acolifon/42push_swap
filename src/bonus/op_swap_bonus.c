@@ -6,13 +6,13 @@
 /*   By: ancarol9 <ancarol9@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/11 18:05:09 by ancarol9          #+#    #+#             */
-/*   Updated: 2025/03/21 19:01:23 by ancarol9         ###   ########.fr       */
+/*   Updated: 2025/03/24 15:25:08 by ancarol9         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../includes/bonus/push_swap_bonus.h"
+#include "../../includes/bonus/checker_bonus.h"
 
-void	swap(t_stack_node **stack, char letter)
+void	swap(t_stack_node **stack)
 {
 	t_stack_node	*tmp;
 
@@ -25,15 +25,11 @@ void	swap(t_stack_node **stack, char letter)
 	tmp->next = (*stack)->next;
 	(*stack)->next = tmp;
 	tmp->next->prev = tmp;
-	if (letter == 'a')
-		write(1, "sa\n", 3);
-	else if (letter == 'b')
-		write(1, "sb\n", 3);
 }
 
 void	swap_a_b(t_stack_node **stack_a, t_stack_node **stack_b)
 {
-	swap(stack_a, 's');
-	swap(stack_b, 's');
+	swap(stack_a);
+	swap(stack_b);
 	write(1, "ss\n", 3);
 }

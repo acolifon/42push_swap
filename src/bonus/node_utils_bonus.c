@@ -6,11 +6,11 @@
 /*   By: ancarol9 <ancarol9@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/21 17:42:34 by ancarol9          #+#    #+#             */
-/*   Updated: 2025/03/21 19:14:05 by ancarol9         ###   ########.fr       */
+/*   Updated: 2025/03/24 15:23:59 by ancarol9         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../includes/bonus/push_swap_bonus.h"
+#include "../../includes/bonus/checker_bonus.h"
 
 int	stack_size(t_stack_node *lst)
 {

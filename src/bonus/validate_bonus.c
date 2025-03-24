@@ -6,11 +6,11 @@
 /*   By: ancarol9 <ancarol9@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/21 16:31:00 by ancarol9          #+#    #+#             */
-/*   Updated: 2025/03/21 19:07:53 by ancarol9         ###   ########.fr       */
+/*   Updated: 2025/03/24 15:25:24 by ancarol9         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../includes/bonus/push_swap_bonus.h"
+#include "../../includes/bonus/checker_bonus.h"
 
 bool	is_duplicate(t_stack_node *lst)
 {
@@ -37,7 +37,7 @@ bool	is_duplicate(t_stack_node *lst)
 bool	is_digit(char **nbr)
 {
 	int	i;
-	int j;
+	int	j;
 
 	i = 0;
 	j = 0;
@@ -69,5 +69,3 @@ bool	is_inorder(t_stack_node *lst)
 	}
 	return (true);
 }
-
-
